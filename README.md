@@ -1,1 +1,1 @@
-[github2](https://github.com/hoperyy) · [Home2](docs/)
+[github](https://github.com/hoperyy) · [Home](docs/)
