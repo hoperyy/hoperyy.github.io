@@ -25,6 +25,8 @@
 </head>
 <body>
   <div id="app"></div>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/clipboard.js/1.7.1/clipboard.min.js"></script>
   <script>
     window.$docsify = {
       loadSidebar: true,
@@ -40,14 +42,37 @@
           })
 
           hook.beforeEach(function (content) {
-            // 每次开始解析 Markdown 内容时调用
-            // ...
-            return content
+              // 每次开始解析 Markdown 内容时调用
+              // 找出代码，并写入 textarea
+              var reg = /(\`\`\`\w*\n)([\s\S]*?)(\n\`\`\`)/g;
+              var result = content.match(reg);
+
+              if (result && result.length) {
+                    var positionArr = []; // 找到所有匹配的字符串起止位置
+
+                    var newContent = content;
+                    var str = '';
+                    result.forEach((matchedStr, index) => {
+                        var startIndex = newContent.indexOf(matchedStr);
+                        var endIndex = startIndex + matchedStr.length;
+
+                        str += newContent.substring(0, endIndex);
+
+                        var insertedStr = '\n<textarea style="display: none;">' + matchedStr.replace(/\`\`\`\w*\n/, '').replace(/\`\`\`$/, '') + '</textarea>\n';
+                        str += insertedStr;
+
+                        newContent = newContent.substring(endIndex);
+                    });
+
+                    if (str) {
+                        content = str;
+                    }
+              }
+              return content;
           })
 
           hook.afterEach(function (html, next) {
             // 解析成 html 后调用。beforeEach 和 afterEach 支持处理异步逻辑
-            // ...
             // 异步处理完成后调用 next(html) 返回结果
             html = html.replace(/\<\/pre\>/g, '<span class="plugin-btn-copy">copy</span></pre>');
             next(html)
@@ -59,7 +84,30 @@
           })
 
           hook.mounted(function () {
-            // 初始化完成后调用 ，只调用一次，没有参数。
+              // 初始化完成后调用 ，只调用一次，没有参数。
+              var clipboard = new Clipboard('.plugin-btn-copy', {
+                text: function (trigger) {
+                  return trigger.parentNode.nextSibling.value;
+                }
+              });
+
+              clipboard.on('success', function (e) {
+                $(e.trigger).html('copied');
+
+                var timer = setTimeout(() => {
+                    $(e.trigger).html('copy');
+                    clearTimeout(timer);
+                }, 1000);
+              });
+
+              clipboard.on('error', function (e) {
+                $(e.trigger).html('copy failed');
+
+                var timer = setTimeout(() => {
+                  $(e.trigger).html('copy');
+                  clearTimeout(timer);
+                }, 1000);
+              });
           })
 
           hook.ready(function () {
