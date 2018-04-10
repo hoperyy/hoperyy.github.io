@@ -1,6 +1,6 @@
 <!-- docs/_sidebar.md -->
 
-* [Home](/)
-* [Guide](guide.md)
-* zh-cn
-    * [a](zh-cn/a.md)
++   [Home](docs/)
++   [Guide](docs/guide.md)
++   zh-cn
+    +   [a](docs/zh-cn/a.md)
