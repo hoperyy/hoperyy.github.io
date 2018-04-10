@@ -31,6 +31,8 @@
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       },
+      maxLevel: 4,
+      // subMaxLevel: 2, // sidebar 展示二级目录
       plugins: [
         function (hook, vm) {
           hook.init(function () {
