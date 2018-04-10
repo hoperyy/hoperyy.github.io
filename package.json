@@ -4,7 +4,8 @@
   "description": "personal website",
   "main": "index.js",
   "scripts": {
-    "dev": "docsify serve ./"
+    "dev": "docsify serve ./",
+    "push": "git add . && git commit -m 'update' && git push origin master"
   },
   "repository": {
     "type": "git",
