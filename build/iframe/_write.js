@@ -72,28 +72,29 @@ module.exports = () => {
         if (result) {
             // 清空所有的 iframe 引入代码
             finalContent = finalContent.replace(/\[\]\([\s\S]*?\:include\'\)/g, '<!--tempreading-->').replace(/(\<\!\-\-tempreading\-\-\>)([\n\t\s]*)/g, '');
+            
+            let lastStr = '';
+            let leftStr = finalContent;
             result.forEach((matchedStr, index) => {
-
-                // 动态生成 iframe 文件
-                const originStr = matchedStr.replace(/\`\`\`\w*\n/, '').replace(/\`\`\`$/, '');
-
                 const relativePath = filePath.replace(root, '');
                 const iframeFileName = relativePath.replace(/\//g, '-').replace(/\.md$/, `-${index}.html`);
-
                 const targetIframeFile = path.join(targetIframeDir, iframeFileName);
+                
+                // 动态生成 iframe 文件
+                const originStr = matchedStr.replace(/\`\`\`\w*\n/, '').replace(/\`\`\`$/, '');
 
                 fse.ensureFileSync(targetIframeFile);
 
                 fse.writeFileSync(targetIframeFile, getIframeContent(originStr));
 
                 // 在 md 中写入引入代码
-                finalContent = finalContent.replace('<!-- run -->', `[](${relative(filePath, targetIframeFile)} ':include')\n\n<!-- run -->`);
-
-                // 不知道为什么，引入了很多个换行，这里清除一下
-                finalContent = finalContent.replace(/[\s\r\n]*?/, '');
-
-                fs.writeFileSync(filePath, finalContent);
+                leftStr = leftStr.replace('<!-- run -->', `[](${relative(filePath, targetIframeFile)} ':include')\n\n<!-- run -->`);
+                const endIndex = leftStr.indexOf(matchedStr) + matchedStr.length;
+                lastStr += leftStr.substring(0, endIndex);
+                leftStr = leftStr.substring(endIndex);
             });
+
+            fs.writeFileSync(filePath, lastStr);
         }
     });
 };
