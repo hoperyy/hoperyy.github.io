@@ -8,7 +8,7 @@ const relative = require('relative');
 const root = path.join(__dirname, '../../');
 const docDir = path.join(root, 'docs');
 
-const targetIframeDir = path.join(docDir, '_iframes');
+const targetIframeDir = path.join(docDir, '_iframe');
 
 fse.removeSync(targetIframeDir);
 fse.ensureDirSync(targetIframeDir);
@@ -41,7 +41,7 @@ module.exports = () => {
 
     // 过滤文件，只选取 md 文件
     files.forEach((filePath) => {
-        if (/(\/_iframes)/.test(filePath)) {
+        if (/(\/_iframe)/.test(filePath)) {
             return;
         }
 
@@ -74,7 +74,7 @@ module.exports = () => {
                 const relativePath = filePath.replace(root, '');
                 const iframeFileName = relativePath.replace(/\//g, '-').replace(/\.md$/, '.html');
 
-                const targetIframeFile = path.join(docDir, '_iframe', iframeFileName);
+                const targetIframeFile = path.join(targetIframeDir, iframeFileName);
 
                 fse.ensureFileSync(targetIframeFile);
 
