@@ -17,37 +17,56 @@
 
         <body>
            <!-- run -->
+
 <style>
-	.demo {
-		position: relative;
-		background: red;
-		width: 200px;
-		height: 200px;
-		transform: perspective(800px) rotateY(-60deg) rotateX(30deg);
-        transform-style: preserve-3d;
-        top: 50%;
-        margin: 0 auto;
-        margin-top: -100px;
-	}
+div.demo {
+	position: relative;
+	height: 300px;
+}
 
-	.demo .inner {
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		background: red;
-		
-		transition: 1s all ease;
-	}
+div.demo .x-line,
+div.demo .y-line {
+	position: absolute;
+	background: black;
+}
 
-	.demo:hover .inner {
-		transform: translateZ(150px);
-	}
+div.demo .x-line {
+	left: 5px;
+	top: 0;
+	height: 1px;
+	width: 100%;
+}
+
+div.demo .y-line {
+	left: 0;
+	top: 9px;
+	height: 100%;
+	width: 1px;
+}
+
+div.demo div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 100px;
+}
+div.demo .red {
+	background: red;
+	transform: rotate(45deg) translate(100px, 100px);
+}
+
+div.demo .green {
+	background: green;
+	transform: translate(100px, 100px) rotate(45deg);
+}
 </style>
 
 <div class="demo">
-	<div class="inner"></div>
+	<span class="x-line"></span>
+	<span class="y-line"></span>
+	<div class="red"></div>
+	<div class="green"></div>
 </div>
 
         </body>
