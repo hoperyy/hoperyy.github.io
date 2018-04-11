@@ -66,13 +66,15 @@ module.exports = () => {
         var result = content.match(reg);
 
         if (result) {
-            result.forEach((matchedStr) => {
+            // 清空所有的 iframe 引入代码
+            finalContent = finalContent.replace(/\[\]\([\s\S]*?\:include\'\)/g, '');
+            result.forEach((matchedStr, index) => {
 
                 // 动态生成 iframe 文件
                 const originStr = matchedStr.replace(/\`\`\`\w*\n/, '').replace(/\`\`\`$/, '');
 
                 const relativePath = filePath.replace(root, '');
-                const iframeFileName = relativePath.replace(/\//g, '-').replace(/\.md$/, '.html');
+                const iframeFileName = relativePath.replace(/\//g, '-').replace(/\.md$/, `-${index}.html`);
 
                 const targetIframeFile = path.join(targetIframeDir, iframeFileName);
 
@@ -81,8 +83,6 @@ module.exports = () => {
                 fse.writeFileSync(targetIframeFile, getIframeContent(originStr));
 
                 // 在 md 中写入引入代码
-                // 清空所有的 iframe 引入代码
-                finalContent = finalContent.replace(/\[\]\([\s\S]*?\:include\'\)/g, '');
                 finalContent = finalContent.replace('<!-- executable -->', `[](${relative(filePath, targetIframeFile)} ':include')\n\n<!-- executable -->`);
 
                 fs.writeFileSync(filePath, finalContent);
