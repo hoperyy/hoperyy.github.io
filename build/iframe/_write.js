@@ -10,8 +10,13 @@ const docDir = path.join(root, 'docs');
 
 const targetIframeDir = path.join(docDir, '_iframe');
 
-fse.removeSync(targetIframeDir);
 fse.ensureDirSync(targetIframeDir);
+
+fs.readdirSync(targetIframeDir).forEach((fileName) => {
+    if (/\.html$/.test(fileName)) {
+        fse.removeSync(path.join(targetIframeDir, fileName));
+    }
+});
 
 const getIframeContent = (content) => {
     return `

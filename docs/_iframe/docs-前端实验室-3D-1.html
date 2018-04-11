@@ -29,8 +29,9 @@
         margin: 0 auto;
         margin-top: -100px;
 	}
-
-	.demo .inner {
+	
+	.demo .inner1,
+	.demo .inner2 {
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -39,15 +40,23 @@
 		background: red;
 		
 		transition: 1s all ease;
+
+		transform-style:preserve-3d;
 	}
 
-	.demo:hover .inner {
+	.demo:hover .inner1 {
 		transform: translateZ(150px);
+	}
+
+	.demo:hover .inner2 {
+		transform: translateZ(-300px);
 	}
 </style>
 
 <div class="demo">
-	<div class="inner"></div>
+	<div class="inner1">
+		<div class="inner2"></div>
+	</div>
 </div>
 
         </body>

@@ -32,12 +32,26 @@ module.exports = () => {
         return blank;
     };
 
+    const isBlankDir = (dirObj) => {
+        let hasMdFiles = false;
+        
+        dirObj.children.forEach((item) => {
+            if (/\.md/.test(item.extension)) {
+                hasMdFiles = true;
+            }
+        });
+
+        return !hasMdFiles;
+    };
+
     const insertContent = (tree) => {
         if (docDir !== tree.path) {
             let blank = getTabBlank(tree.path);
 
             if (tree.type === 'directory') {
-                content.push(`${blank}+ [${tree.name.replace(/\.md$/, '')}](${ab2link(tree.path)}/)`); // 目录的链接多了一个 /
+                if (!isBlankDir(tree)) {
+                    content.push(`${blank}+ [${tree.name.replace(/\.md$/, '')}](${ab2link(tree.path)}/)`); // 目录的链接多了一个 /
+                }
             } else {
                 content.push(`${blank}+ [${tree.name.replace(/\.md$/, '')}](${ab2link(tree.path)})`);
             }
