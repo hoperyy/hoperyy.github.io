@@ -25,7 +25,8 @@
 
   /* iframe 无边框 */
   .markdown-section iframe {
-      border: 0;
+      border: 1px solid #ccc;
+      height: 600px;
   }
 
   /* sidebar 样式优化 */
@@ -38,6 +39,12 @@
   .sidebar li a {
       padding-top: 6px;
       padding-bottom: 6px;
+  }
+
+  .sidebar li.folder-wrapper > a,
+  .sidebar li a.folder {
+      font-weight: bold;
+      font-size: 15px;
   }
   </style>
 </head>
@@ -105,36 +112,42 @@
                 hook.doneEach(function () {
                     // 每次路由切换时数据全部加载完成后调用，没有参数。
                     // ...
+                    (function copyCode() {
+                        // 初始化完成后调用 ，只调用一次，没有参数。
+                        var clipboard = new Clipboard('.plugin-btn-copy', {
+                            text: function (trigger) {
+                                return trigger.parentNode.nextSibling.value;
+                            }
+                        });
+
+                        clipboard.on('success', function (e) {
+                            $(e.trigger).html('copied');
+
+                            var timer = setTimeout(() => {
+                                $(e.trigger).html('copy');
+                                clearTimeout(timer);
+                            }, 1000);
+                        });
+
+                        clipboard.on('error', function (e) {
+                            $(e.trigger).html('copy failed');
+
+                            var timer = setTimeout(() => {
+                                $(e.trigger).html('copy');
+                                clearTimeout(timer);
+                            }, 1000);
+                        });
+                    })();
+
+                    (function enhanceSidebar() {
+                        var $targetA = $('.sidebar-nav ul').prev('a');
+                        $targetA.addClass('folder');
+                        $targetA.parent().addClass('folder-wrapper');
+                        $('.folder-wrapper').siblings().addClass('folder-wrapper');
+                    })();
                 })
 
                 hook.mounted(function () {
-                      (function copyCode() {
-                          // 初始化完成后调用 ，只调用一次，没有参数。
-                          var clipboard = new Clipboard('.plugin-btn-copy', {
-                              text: function (trigger) {
-                                  return trigger.parentNode.nextSibling.value;
-                              }
-                          });
-
-                          clipboard.on('success', function (e) {
-                              $(e.trigger).html('copied');
-
-                              var timer = setTimeout(() => {
-                                  $(e.trigger).html('copy');
-                                  clearTimeout(timer);
-                              }, 1000);
-                          });
-
-                          clipboard.on('error', function (e) {
-                              $(e.trigger).html('copy failed');
-
-                              var timer = setTimeout(() => {
-                                  $(e.trigger).html('copy');
-                                  clearTimeout(timer);
-                              }, 1000);
-                          });
-                      })();
-                      
                 })
 
                 hook.ready(function () {
