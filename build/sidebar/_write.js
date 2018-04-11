@@ -17,7 +17,7 @@ module.exports = () => {
     };
 
     const content = [];
-    const tree = readFileTree(docDir, { exclude: /(node_modules)|(readme\.md)/i, extensions: /\.md$/ });
+    const tree = readFileTree(docDir, { exclude: /(node_modules)|(readme\.md)|(\/_iframe)/i, extensions: /\.md$/ });
 
     const getTabBlank = (absolutePath) => {
         const relativePath = absolutePath.replace(docDir, '');

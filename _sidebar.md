@@ -1,4 +1,3 @@
-  + [_iframe](docs/_iframe/)
   + [blog](docs/blog/)
   + [snippets](docs/snippets/)
     + [browser ajax](docs/snippets/browser ajax)
