@@ -4,9 +4,9 @@
   "description": "personal website",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run sidebar && docsify serve ./",
-    "push": "npm run sidebar && git add . && git commit -m 'update' && git push origin master",
-    "sidebar": "node build/sidebar/build"
+    "dev": "npm run build && docsify serve ./",
+    "push": "npm run build && git add . && git commit -m 'update' && git push origin master",
+    "build": "node build/sidebar/build & node build/iframe/build"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "directory-tree": "^2.1.0",
     "docsify-cli": "^4.2.1",
     "fs-extra": "^5.0.0",
-    "recursive-readdir-sync": "^1.0.6"
+    "recursive-readdir-sync": "^1.0.6",
+    "relative": "^3.0.2"
   }
 }
