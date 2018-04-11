@@ -62,12 +62,12 @@ module.exports = () => {
 
         let finalContent = content;
 
-        var reg = /(\<\!\-\-\sexecutable\s\-\-\>)([\s\n]*?)(\`\`\`\w*\n)([\s\S]*?)(\`\`\`)/g;
+        var reg = /(\<\!\-\-\srun\s\-\-\>)([\s\n]*?)(\`\`\`\w*\n)([\s\S]*?)(\`\`\`)/g;
         var result = content.match(reg);
 
         if (result) {
             // 清空所有的 iframe 引入代码
-            finalContent = finalContent.replace(/\[\]\([\s\S]*?\:include\'\)/g, '');
+            finalContent = finalContent.replace(/\[\]\([\s\S]*?\:include\'\)/g, '<!--tempreading-->').replace(/(\<\!\-\-tempreading\-\-\>)([\n\t\s]*)/g, '');
             result.forEach((matchedStr, index) => {
 
                 // 动态生成 iframe 文件
@@ -83,7 +83,10 @@ module.exports = () => {
                 fse.writeFileSync(targetIframeFile, getIframeContent(originStr));
 
                 // 在 md 中写入引入代码
-                finalContent = finalContent.replace('<!-- executable -->', `[](${relative(filePath, targetIframeFile)} ':include')\n\n<!-- executable -->`);
+                finalContent = finalContent.replace('<!-- run -->', `[](${relative(filePath, targetIframeFile)} ':include')\n\n<!-- run -->`);
+
+                // 不知道为什么，引入了很多个换行，这里清除一下
+                finalContent = finalContent.replace(/[\s\r\n]*?/, '');
 
                 fs.writeFileSync(filePath, finalContent);
             });
