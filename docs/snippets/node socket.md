@@ -2,7 +2,7 @@
 
 客户端
 
-```javascript
+```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
 <script>
 var socket = io.connect('//127.0.0.1:3000', {
