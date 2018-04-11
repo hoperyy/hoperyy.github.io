@@ -1,22 +1,19 @@
-
-
 <style>
-.sidebar,
-.sidebar-toggle {
-    display: none;
-}
+    .sidebar,
+    .sidebar-toggle {
+        display: none;
+    }
 
-.content {
-    left: 0;
-    font-size: 20px;
-    text-align: center;
-}
+    .content {
+        left: 0;
+        font-size: 20px;
+        text-align: center;
+    }
 
-a {
-    text-decoration: none;
-}
+    a {
+        text-decoration: none;
+    }
 </style>
-
 
 [github](https://github.com/hoperyy) · [home](docs/) · [blog](docs/blog/) · [snippets](docs/snippets/)
 

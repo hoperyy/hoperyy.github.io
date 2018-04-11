@@ -44,7 +44,7 @@
 <body>
   <div id="app"></div>
   <!-- 支持 vue -->
-  <script src="//unpkg.com/vue"></script>
+  <!-- <script src="//unpkg.com/vue"></script> -->
 
   <!-- 支持 jquery -->
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
@@ -68,7 +68,7 @@
                 hook.beforeEach(function (content) {
                     // 每次开始解析 Markdown 内容时调用
                     // 找出代码，并写入 textarea
-                    var reg = /(\`\`\`\w*\n)([\s\S]*?)(\n\`\`\`)/g;
+                    var reg = /(\`\`\`\w*\n)([\s\S]*?)(\`\`\`)/g;
                     var result = content.match(reg);
 
                     if (result && result.length) {
