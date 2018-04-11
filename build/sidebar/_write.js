@@ -37,7 +37,7 @@ module.exports = () => {
             let blank = getTabBlank(tree.path);
 
             if (tree.type === 'directory') {
-                content.push(`${blank}+ ${tree.name.replace(/\.md$/, '')}`);
+                content.push(`${blank}+ [${tree.name.replace(/\.md$/, '')}](${ab2link(tree.path)}/)`); // 目录的链接多了一个 /
             } else {
                 content.push(`${blank}+ [${tree.name.replace(/\.md$/, '')}](${ab2link(tree.path)})`);
             }
