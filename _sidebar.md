@@ -8,6 +8,7 @@
     + [node 快速生成软链接](docs/snippets/node 快速生成软链接)
     + [node 文件操作](docs/snippets/node 文件操作)
     + [node 错误处理](docs/snippets/node 错误处理)
+    + [npmignore](docs/snippets/npmignore)
     + [timer](docs/snippets/timer)
     + [webpack](docs/snippets/webpack)
     + [注释](docs/snippets/注释)
