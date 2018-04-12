@@ -19,32 +19,24 @@
            <!-- run -->
 
 <style>
-div.demo {
-	width: 400px;
-	height: 400px;
-	border: 2px solid black;
-	background: url(./mask/bg.jpg) 0 0 no-repeat;
-	background-size: 100% 100%;
-	-webkit-mask: url(./mask/mask_1.png) no-repeat;
+@keyframes demo {
+    to{
+        transform: rotate(360deg);
+    }
+}
+.demo{
+    width:100px;
+    height:100px;
+    background: #ccc;
+    margin: 150px auto;
+    border-radius: 50%;
+    box-shadow:15px 0 5px blue,0 15px 5px red,-15px 0 5px yellow,0 -15px 5px green;
+
+    animation: 1s demo linear infinite;
 }
 </style>
 
-<div id="demo" class="demo"></div>
-	
-<script>
-
-;(function(){
-    var oDiv = document.getElementById('demo');
-
-    oDiv.onmousemove = function(ev) {
-        var oEvent = ev || event;
-
-        var l = oEvent.clientX - 350;
-        var t = oEvent.clientY - 300;
-        oDiv.style.WebkitMaskPosition = l + 'px ' + t + 'px';
-    };
-}())
-</script>
+<div class="demo"></div>
 
         </body>
 
