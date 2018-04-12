@@ -15,6 +15,7 @@
     }
 </style>
 
-[github](https://github.com/hoperyy) · [网站首页](docs/) · [博客](docs/blog/) · [代码片段](docs/snippets/)
+[github](https://github.com/hoperyy)  · [blog](docs/blog/) · [snippets](docs/snippets/)
 
 刘远洋
+
