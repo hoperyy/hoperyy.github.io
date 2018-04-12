@@ -18,14 +18,18 @@
         <body>
            <!-- run -->
 <style>
-	div.demo {
-		width:200px;
-		height:200px;
-		background: red;
-		margin: 20px auto;
+div.demo {
+	width: 100px;
+	height: 100px;
+	font-size: 20px;
+	color: #fff;
+	background: #000;
+	transition: 1s all ease;
+}
 
-		transform: perspective(100px) rotateX(0deg) translateZ(0px);
-	}
+div.demo:hover {
+	transform: scaleY(2);
+}
 </style>
 
 <div class="demo"></div>

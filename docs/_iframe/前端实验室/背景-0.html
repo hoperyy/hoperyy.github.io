@@ -17,20 +17,26 @@
 
         <body>
            <!-- run -->
+
 <style>
 div.demo {
 	width: 100px;
 	height: 100px;
-	font-size: 20px;
-	color: #fff;
-	background: #000;
-	transform: scale(-1, 1);
+	border: 2px solid black;
+	transition: 0.5s all linear;
+	background: url(./imgs/bg/1.jpg) 0 0 no-repeat;
+	background-position: center center;
+
+	background-size: 200% 200%;
 }
+
+div.demo:hover {
+	background-size: 100% 100%;
+}
+
 </style>
 
-<div class="demo">
-	scale
-</div>
+<div class="demo"></div>
 
         </body>
 
