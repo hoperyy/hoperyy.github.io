@@ -47,6 +47,15 @@
       font-weight: bold;
       font-size: 15px;
   }
+
+  /* 列表收起与展开 */
+  .sidebar li ul:nth-child(2) {
+      display: none;
+  }
+
+  .sidebar li.active ul:nth-child(2) {
+      display: block;
+  }
   </style>
 </head>
 <body>
@@ -146,6 +155,12 @@
                         $targetA.addClass('folder');
                         $targetA.parent().addClass('folder-wrapper');
                         $('.folder-wrapper').siblings().addClass('folder-wrapper');
+                    })();
+
+                    (function toggleSidebar() {
+                        $('.folder-wrapper').click(function() {
+                            $(this).toggleClass('active');
+                        });
                     })();
                 })
 
