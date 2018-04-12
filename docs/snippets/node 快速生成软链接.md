@@ -14,7 +14,9 @@ const targets = [
 ];
 
 targets.forEach((target) => {
-    fse.ensureDirSync(target);
+    if (!require('fs').existsSync(target)) {
+        fse.ensureDirSync(target);
+    }
 
     try {
         fse.removeSync(target);
