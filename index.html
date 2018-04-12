@@ -49,13 +49,13 @@
   }
 
   /* 列表收起与展开 */
-  .sidebar li ul:nth-child(2) {
+  /* .sidebar li ul:nth-child(2) {
       display: none;
   }
 
   .sidebar li.active ul:nth-child(2) {
       display: block;
-  }
+  } */
   </style>
 </head>
 <body>
@@ -157,11 +157,17 @@
                         $('.folder-wrapper').siblings().addClass('folder-wrapper');
                     })();
 
-                    (function toggleSidebar() {
-                        $('.folder-wrapper').click(function() {
-                            $(this).toggleClass('active');
-                        });
-                    })();
+                    // (function toggleSidebar() {
+                    //     $('.sidebar a').click(function (e) {
+                    //         console.log($(this).parents('.folder-wrapper')[0]);
+                    //         $(this).parents('.folder-wrapper').addClass('active');
+                    //         e.stopPropagation();
+                    //     });
+                    //     $('.sidebar .folder-wrapper').click(function(e) {
+                    //         console.log(e);
+                    //         $(this).toggleClass('active');
+                    //     });
+                    // })();
                 })
 
                 hook.mounted(function () {
