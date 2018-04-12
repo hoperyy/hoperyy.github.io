@@ -14,7 +14,6 @@
     + [质量 tryjs](docs/snippets/质量 tryjs)
     + [质量 单元测试](docs/snippets/质量 单元测试)
   + [前端实验室](docs/前端实验室/)
-    + [3D](docs/前端实验室/3D)
     + [3D前后切换](docs/前端实验室/3D前后切换)
     + [3D图片环](docs/前端实验室/3D图片环)
     + [3D小试](docs/前端实验室/3D小试)
