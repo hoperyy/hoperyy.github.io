@@ -79,26 +79,28 @@
                     var result = content.match(reg);
 
                     if (result && result.length) {
-                          var positionArr = []; // 找到所有匹配的字符串起止位置
+                        var positionArr = []; // 找到所有匹配的字符串起止位置
 
-                          var newContent = content;
-                          var str = '';
-                          result.forEach((matchedStr, index) => {
-                              var startIndex = newContent.indexOf(matchedStr);
-                              var endIndex = startIndex + matchedStr.length;
+                        var newContent = content;
+                        var str = '';
+                        result.forEach((matchedStr, index) => {
+                            var startIndex = newContent.indexOf(matchedStr);
+                            var endIndex = startIndex + matchedStr.length;
 
-                              str += newContent.substring(0, endIndex);
+                            str += newContent.substring(0, endIndex);
 
-                              var insertedStr = '\n<textarea style="display: none;">' + matchedStr.replace(/\`\`\`\w*\n/, '').replace(/\`\`\`$/, '') + '</textarea>\n';
-                              str += insertedStr;
+                            var insertedStr = '\n<textarea style="display: none;">' + matchedStr.replace(/\`\`\`\w*\n/, '').replace(/\`\`\`$/, '') + '</textarea>\n';
+                            str += insertedStr;
 
-                              newContent = newContent.substring(endIndex);
-                          });
+                            newContent = newContent.substring(endIndex);
+                        });
 
-                          if (str) {
-                              content = str;
-                          }
+                        if (str) {
+                            content = str;
+                        }
                     }
+
+                    console.log(content);
                     return content;
                 })
 
