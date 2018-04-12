@@ -82,18 +82,18 @@
                     if (result && result.length) {
                         var positionArr = []; // 找到所有匹配的字符串起止位置
 
-                        var newContent = content;
+                        var leftStr = content;
                         var str = '';
                         result.forEach((matchedStr, index) => {
-                            var startIndex = newContent.indexOf(matchedStr);
+                            var startIndex = leftStr.indexOf(matchedStr);
                             var endIndex = startIndex + matchedStr.length;
 
-                            str += newContent.substring(0, endIndex);
+                            str += leftStr.substring(0, endIndex);
 
                             var insertedStr = '\n<textarea style="display: none;">' + matchedStr.replace(/\`\`\`\w*\n/, '').replace(/\`\`\`$/, '') + '</textarea>\n';
                             str += insertedStr;
 
-                            newContent = newContent.substring(endIndex);
+                            leftStr = leftStr.substring(endIndex);
                         });
 
                         if (str) {
@@ -101,7 +101,6 @@
                         }
                     }
 
-                    console.log(content);
                     return content;
                 })
 
