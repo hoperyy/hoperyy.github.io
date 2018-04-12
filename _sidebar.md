@@ -9,6 +9,7 @@
     + [node 文件操作](docs/snippets/node 文件操作)
     + [node 错误处理](docs/snippets/node 错误处理)
     + [timer](docs/snippets/timer)
+    + [webpack](docs/snippets/webpack)
     + [注释](docs/snippets/注释)
     + [质量 lint](docs/snippets/质量 lint)
     + [质量 tryjs](docs/snippets/质量 tryjs)
