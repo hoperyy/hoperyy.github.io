@@ -11,6 +11,7 @@
     + [npmignore](docs/snippets/npmignore)
     + [timer](docs/snippets/timer)
     + [webpack](docs/snippets/webpack)
+    + [快速转为es5](docs/snippets/快速转为es5)
     + [注释](docs/snippets/注释)
     + [质量 lint](docs/snippets/质量 lint)
     + [质量 tryjs](docs/snippets/质量 tryjs)

@@ -1,4 +1,4 @@
-```bash
+```javascript
 .git/
 .idea/
 .DS_Store
