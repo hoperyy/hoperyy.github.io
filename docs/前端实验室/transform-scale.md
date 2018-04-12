@@ -16,12 +16,16 @@
 
 <style>
 div.demo {
+	position: relative;
 	width: 100px;
 	height: 100px;
 	font-size: 20px;
 	color: #fff;
 	background: #000;
 	transition: 1s all ease;
+	margin: 0 auto;
+	top: 50%;
+	margin-top: -50px;
 }
 
 div.demo:hover {
@@ -41,12 +45,16 @@ div.demo:hover {
 
 <style>
 div.demo {
+	position: relative;
 	width: 100px;
 	height: 100px;
 	font-size: 20px;
 	color: #fff;
 	background: #000;
 	transform: scale(1, -1);
+	margin: 0 auto;
+	top: 50%;
+	margin-top: -50px;
 }
 </style>
 
@@ -68,6 +76,7 @@ div.demo {
 	margin-bottom: 120px;
 }
 div.demo div {
+	position: relative;
 	width: 100px;
 	height: 100px;
 	font-size: 20px;
@@ -75,6 +84,9 @@ div.demo div {
 	background: #000;
 	transform-origin: center bottom;
 	transform: scale(1, -1);
+	margin: 0 auto;
+	top: 50%;
+	margin-top: -50px;
 }
 </style>
 
@@ -94,12 +106,16 @@ div.demo div {
 ```html
 <style>
 div.demo {
+	position: relative;
 	width: 100px;
 	height: 100px;
 	font-size: 20px;
 	color: #fff;
 	background: #000;
 	transition: 1s all ease;
+	margin: 0 auto;
+	top: 50%;
+	margin-top: -50px;
 }
 
 div.demo:hover {

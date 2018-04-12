@@ -121,6 +121,8 @@ module.exports = () => {
                 leftStr = leftStr.substring(endIndex);
             });
 
+            lastStr += leftStr;
+
             fs.writeFileSync(filePath, lastStr);
         }
     });

@@ -13,10 +13,13 @@
 
 <style>
 	div.demo {
-		width:200px;
-		height:200px;
+		position: relative;
+		width: 200px;
+		height: 200px;
 		background: red;
-		margin: 20px auto;
+		margin: 0 auto;
+		top: 50%;
+		margin-top: -100px;
 
 		transform: perspective(10px) rotateX(0deg) translateZ(1px);
 	}
@@ -33,10 +36,13 @@
 ```html
 <style>
 	div.demo {
-		width:200px;
-		height:200px;
+		position: relative;
+		width: 200px;
+		height: 200px;
 		background: red;
-		margin: 20px 0;
+		margin: 0 auto;
+		top: 50%;
+		margin-top: -100px;
 
 		transform: perspective(10px) rotateX(1deg) translateZ(0px);
 	}
@@ -53,10 +59,13 @@
 ```html
 <style>
 	div.demo {
-		width:200px;
-		height:200px;
+		position: relative;
+		width: 200px;
+		height: 200px;
 		background: red;
-		margin: 20px 0;
+		margin: 0 auto;
+		top: 50%;
+		margin-top: -100px;
 
 		transform: perspective(10px) rotateX(0deg) translateZ(1px);
 	}
