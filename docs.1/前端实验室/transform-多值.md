@@ -1,3 +1,11 @@
+<style>
+.markdown-section iframe[data-id="0"],
+.markdown-section iframe[data-id="1"],
+.markdown-section iframe[data-id="2"] {
+    height: 400px;
+}
+</style>
+
 [](../_iframe/前端实验室/transform-多值-0.html ':include data-id=0')
 
 <!-- run -->

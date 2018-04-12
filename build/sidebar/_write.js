@@ -17,7 +17,7 @@ module.exports = () => {
     };
 
     const content = [];
-    const tree = readFileTree(docDir, { exclude: /(node_modules)|(readme\.md)|(\/_iframe)/i, extensions: /\.md$/ });
+    const tree = readFileTree(docDir, { exclude: /(node_modules)|(\/_iframe)/i, extensions: /\.md$/ });
 
     const getTabBlank = (absolutePath) => {
         const relativePath = absolutePath.replace(docDir, '');
@@ -66,5 +66,13 @@ module.exports = () => {
 
     insertContent(tree);
 
-    fs.writeFileSync(sidebarFile, content.join('\n'));
+    // 不展示 readme.md
+    const finalContent = [];
+    content.forEach((str) => {
+        if (!/\[README\]/.test(str)) {
+            finalContent.push(str);
+        }
+    });
+
+    fs.writeFileSync(sidebarFile, finalContent.join('\n'));
 };
