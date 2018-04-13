@@ -4,7 +4,7 @@
   "description": "personal website",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run build && docsify serve ./",
+    "dev": "npm run hotbuild & docsify serve ./",
     "push": "npm run backup && npm run build && git add . && git commit -m 'update' && git push origin master",
     "build": "node build/sidebar/build & node build/iframe/build",
     "backup": "node build/backup/index",
@@ -27,5 +27,6 @@
     "fs-extra": "^5.0.0",
     "recursive-readdir-sync": "^1.0.6",
     "relative": "^3.0.2"
-  }
+  },
+  "dependencies": {}
 }

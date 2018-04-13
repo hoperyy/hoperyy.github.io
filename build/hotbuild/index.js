@@ -3,7 +3,7 @@ const chokidar = require('chokidar');
 
 const watcher = chokidar.watch(path.join(__dirname, '../../docs'), {
     persistent: true,
-    ignored: /(\.git)|(\.ds_store)|(node_modules)|(stats\.json)/i,
+    ignored: /(\.ds_store)|(node_modules)|(stats\.json)/i,
 });
 
 const root = path.join(__dirname, '../..');
@@ -13,6 +13,18 @@ function build() {
 }
 
 // listeners
-watcher.on('add', build);
-watcher.on('unlink', build);
-watcher.on('unlinkDir', build);
+watcher.on('ready', (file) => {
+    watcher.on('add', (file) => {
+        console.log('add: ', file);
+        build();
+    });
+    watcher.on('unlink', (file) => {
+        console.log('unlink: ', file);
+        build();
+    });
+    watcher.on('unlinkDir', (file) => {
+        console.log('unlinkDir: ', file);
+        build();
+    });
+});
+
