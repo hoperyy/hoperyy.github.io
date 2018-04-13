@@ -3,7 +3,7 @@ const chokidar = require('chokidar');
 
 const watcher = chokidar.watch(path.join(__dirname, '../../docs'), {
     persistent: true,
-    ignored: /(\.ds_store)|(node_modules)|(stats\.json)/i,
+    ignored: /(\.ds_store)|(node_modules)|(stats\.json)|(_iframe)/i,
 });
 
 const root = path.join(__dirname, '../..');
