@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run hotbuild & docsify serve ./",
-    "push": "npm run backup && npm run build && git add . && git commit -m 'update' && git push origin master",
+    "push": "npm run backup && npm run build && git add . && git commit -m 'update' && git push origin master && exit 0",
     "build": "node build/sidebar/build & node build/iframe/build",
     "backup": "git add . && git commit -m 'backup' && git push origin master:master-backup && exit 0",
     "hotbuild": "node build/hotbuild/index"
