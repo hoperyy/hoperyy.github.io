@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run hotbuild & docsify serve ./",
-    "push": "npm run build && git add . && git commit -m 'update' && git push origin master",
+    "push": "npm run backup && git push origin master",
     "build": "node build/sidebar/build & node build/iframe/build",
-    "backup": "git add . && git commit -m 'backup' && git push origin master:master-backup",
+    "backup": "npm run build && git add . && git commit -m 'backup' && git push origin master:master-backup",
     "hotbuild": "node build/hotbuild/index"
   },
   "repository": {
