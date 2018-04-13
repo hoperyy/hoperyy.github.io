@@ -10,6 +10,7 @@
     + [node 错误处理](docs/snippets/node 错误处理)
     + [npmignore](docs/snippets/npmignore)
     + [timer](docs/snippets/timer)
+    + [vscode 插件](docs/snippets/vscode 插件)
     + [webpack](docs/snippets/webpack)
     + [快速转为es5](docs/snippets/快速转为es5)
     + [注释](docs/snippets/注释)
