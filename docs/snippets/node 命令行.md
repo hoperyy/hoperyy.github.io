@@ -3,8 +3,24 @@
 
 ```javascript
 "bin": {
-    "command": "./bn/xxx.js"
+    "command": "./xxx.js"
 }
+```
 
+```javascript
 #!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const fse = require('fs-extra');
+const commander = require('commander');
+
+commander
+    .command('xxx')
+    .description('xxx project.')
+    .action(() => {
+
+    });
+
+commander.parse(process.argv);
 ```
