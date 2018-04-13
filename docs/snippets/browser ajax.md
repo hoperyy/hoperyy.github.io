@@ -82,7 +82,7 @@ function ajax(opts) {
 
     var headers = {
         'Content-Type': 'application/x-www-form-urlencoded',
-        'Accept': '*/*
+        'Accept': '*/*'
     };
 
     for (var name in headers) {
