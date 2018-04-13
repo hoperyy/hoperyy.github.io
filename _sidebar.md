@@ -6,7 +6,6 @@
     + [node 安装依赖](docs/snippets/node 安装依赖)
     + [node 工具库](docs/snippets/node 工具库)
     + [node 快速生成软链接](docs/snippets/node 快速生成软链接)
-    + [node 文件](docs/snippets/node 文件)
     + [node 文件操作](docs/snippets/node 文件操作)
     + [node 错误处理](docs/snippets/node 错误处理)
     + [npmignore](docs/snippets/npmignore)
