@@ -40,11 +40,13 @@
             cursor: pointer;
             padding-left: 15px;
             margin-left: 0;
+            font-weight: bold;
         }
 
         .sidebar li a {
             padding-top: 6px;
             padding-bottom: 6px;
+            font-weight: normal;
         }
 
         .sidebar li.folder-wrapper > a,
@@ -58,13 +60,13 @@
         } */
 
         /* 列表收起与展开 */
-        /* .sidebar li ul:nth-child(2) {
+        .sidebar-nav ul {
             display: none;
         }
 
-        .sidebar li.active ul:nth-child(2) {
-            display: block;
-        } */
+        .sidebar-nav ul:nth-child(1) {
+            display: block !important;
+        }
     </style>
 </head>
 <body>
@@ -159,7 +161,7 @@
                             });
                         })();
 
-                        (function enhanceSidebar() {
+                        (function enhanceSidebarFolder() {
                             // 为 folder 新增样式 folder-wrapper
                             var $targetA = $('.sidebar-nav ul').prev('a');
                             $targetA.addClass('folder');
@@ -170,30 +172,34 @@
                             // $activeItems = $('.sidebar li.active');
                             // $activeItems.parents('.folder-wrapper').addClass('active');
                         })();
+
+                        (function initSidebarFoldinout() {
+                            // 当前高亮的链接父级 folder 增加 active 状态
+                            $('.sidebar li.active').parents('ul').show().addClass('active');
+                        })();
                     })
 
                     hook.mounted(function () {
                         // 交互，menu 中的 folder 点击时展开或收起
-                        // (function toggleSidebarFolderClick() {
-                        //     var docClick = function (e) {
-                        //         var $target = $(e.target);
+                        (function toggleSidebarFolderClick() {
+                            var docClick = function (e) {
+                                var $target = $(e.target);
 
-                        //         console.log(e.target);
+                                // 如果不是 sidebar 区域的点击，则直接跳过
+                                if (!$target.parents('.sidebar').length) {
+                                    return;
+                                }
 
-                        //         // 如果不是 sidebar 区域的点击，则直接跳过
-                        //         if (!$target.parents('.sidebar').length) {
-                        //             return;
-                        //         }
-
-                        //         // 如果点击的是目录，并且没有任何链接，则展开或关闭
-                        //         if ($target.is('li') && $target.hasClass('folder-wrapper')) {
-                        //             $target.toggleClass('active');
-                        //         }
-                        //     };
-                        //     var $doc = $(document);
-                        //     $doc.off('click', docClick);
-                        //     $doc.on('click', docClick);
-                        // })();
+                                // 如果点击的是目录，并且没有任何链接，则展开或关闭
+                                if ($target.is('a') && $target.hasClass('folder')) {
+                                    var $parentFoldWrapper = $target.parent('.folder-wrapper');
+                                    $parentFoldWrapper.find('ul').toggle().toggleClass('active');
+                                    $parentFoldWrapper.parents('ul').show();
+                                }
+                                
+                            };
+                            $(document).off('click', docClick).on('click', docClick);
+                        })();
                     })
 
                     hook.ready(function () {
