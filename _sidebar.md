@@ -1,7 +1,5 @@
   + [blog](javascript:;)
     + [README](docs/blog/README)
-    + [子目录](javascript:;)
-      + [README](docs/blog/子目录/README)
   + [snippets](javascript:;)
     + [browser ajax](docs/snippets/browser ajax)
     + [node socket](docs/snippets/node socket)
@@ -41,3 +39,5 @@
     + [背景](docs/前端实验室/背景)
     + [蒙板](docs/前端实验室/蒙板)
     + [阴影](docs/前端实验室/阴影)
+  + [知识集](javascript:;)
+    + [README](docs/知识集/README)
