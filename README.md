@@ -15,7 +15,7 @@
     }
 </style>
 
-[github](https://github.com/hoperyy)  · [blog](docs/blog/) · [snippets](docs/snippets/) · [labs](docs/前端实验室/) 
+[github](https://github.com/hoperyy)  · [blog](docs/blog/README) · [snippets](docs/snippets/README) · [labs](docs/前端实验室/README) 
 
 刘远洋
 
