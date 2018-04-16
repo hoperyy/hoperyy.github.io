@@ -2,7 +2,7 @@
 
 ```javascript
 {
-  "name": "@vdian/render-vdf-component",
+  "name": "xxx",
   "version": "1.0.0",
   "description": "渲染 vdf jsx 组件",
   "main": "dist/index.js",
