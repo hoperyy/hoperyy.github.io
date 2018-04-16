@@ -4,7 +4,7 @@
 {
   "name": "xxx",
   "version": "1.0.0",
-  "description": "渲染 vdf jsx 组件",
+  "description": "",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel index.js -d dist",
