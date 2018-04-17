@@ -1,5 +1,3 @@
-  + [blog](javascript:;)
-    + [README](docs/blog/README)
   + [snippets](javascript:;)
     + [README](docs/snippets/README)
     + [browser ajax](docs/snippets/browser ajax)
@@ -41,5 +39,3 @@
     + [背景](docs/前端实验室/背景)
     + [蒙板](docs/前端实验室/蒙板)
     + [阴影](docs/前端实验室/阴影)
-  + [知识集](javascript:;)
-    + [README](docs/知识集/README)
