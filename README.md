@@ -15,7 +15,9 @@
     }
 </style>
 
-[github](https://github.com/hoperyy)  · [blog](docs/blog/README) · [snippets](docs/snippets/README) · [labs](docs/前端实验室/README) 
+刘远洋 
 
-刘远洋
+Node / FE /...
+
+[github](https://github.com/hoperyy) · [blog](https://github.com/hoperyy/blog) · [snippets](docs/snippets/README) · [前端实验室](docs/前端实验室/README)
 
