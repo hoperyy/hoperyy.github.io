@@ -1,31 +1,22 @@
 {
   "name": "hoperyy.github.io",
   "version": "1.0.0",
-  "description": "personal website",
+  "description": "<style>     .sidebar,     .sidebar-toggle {         display: none;     }",
   "main": "index.js",
   "scripts": {
-    "dev": "docsify-build serve & docsify serve ./",
-    "push": "npm run backup && git push origin master",
-    "build": "docsify-build build",
-    "backup": "npm run build && git add . && git commit -m 'backup' && git push origin master:master-backup"
+    "push": "git add . && git commit -m 'update' && docsite ghpage"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hoperyy/hoperyy.github.io.git"
   },
-  "author": "https://github.com/hoperyy",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hoperyy/hoperyy.github.io/issues"
   },
   "homepage": "https://github.com/hoperyy/hoperyy.github.io#readme",
-  "devDependencies": {
-    "chokidar": "^2.0.3",
-    "directory-tree": "^2.1.0",
-    "docsify-build-cli": "^1.0.10",
-    "docsify-cli": "^4.2.1",
-    "fs-extra": "^5.0.0",
-    "recursive-readdir-sync": "^1.0.6",
-    "relative": "^3.0.2"
+  "dependencies": {
+    "docsite-cli": "^1.0.3"
   }
 }

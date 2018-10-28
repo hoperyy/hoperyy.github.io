@@ -19,5 +19,5 @@
 
 Node / FE /...
 
-[github](https://github.com/hoperyy) · [blog](https://github.com/hoperyy/blog) · [snippets](docs/snippets/README) · [前端实验室](docs/前端实验室/README)
+[github](https://github.com/hoperyy) · [blog](https://github.com/hoperyy/blog) · [snippets](https://hoperyy.github.io/snippets/#/) 
 
