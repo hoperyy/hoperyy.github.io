@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+.fullWebsite {
+	}
+.fullWebsite .websiteList {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	}
+.fullWebsite .websiteList .li {
+	float: left;
+	width: 400px;
+	height: 400px;
+	margin: 25px;
+	background: #ccc;
+	border-radius: 10px;
+	cursor: pointer;
+	}
+.fullWebsite .websiteList .li span {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
+	overflow: hidden;
+	text-align: center;
+	font: bold 20px/30px Verdana, Geneva, sans-serif;
+	background: rgba(0,0,0,0.3);
+	border-radius: 10px;
+ 	}
+
