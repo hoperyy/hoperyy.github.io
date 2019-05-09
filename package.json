@@ -1,0 +1,23 @@
+{
+  "name": "hoperyy.github.io",
+  "version": "1.0.0",
+  "description": "This is my website. Welcome here!",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development vuepress dev src --temp ./.temp",
+    "build": "cross-env NODE_ENV=production vuepress build src -d ./dist --temp ./.temp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meteorlxy/meteorlxy.github.io.git"
+  },
+  "dependencies": {
+    "@vuepress/plugin-google-analytics": "1.0.0-alpha.44",
+    "vuepress": "1.0.0-alpha.44",
+    "vuepress-theme-meteorlxy": "1.0.0-alpha.35"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
+  },
+  "homepage": "https://github.com/hoperyy/hoperyy.github.io#readme"
+}
