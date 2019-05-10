@@ -1,7 +1,7 @@
 module.exports = {
-  title: 'Meteorlxy',
+  title: '远洋的网络空间',
 
-  description: 'meteorlxy\'s homepage',
+  description: '远洋的网络空间',
 
   head: [
     ['link', { rel: 'icon', href: '/assets/img/avatar.jpg' }],
@@ -17,47 +17,25 @@ module.exports = {
 
   themeConfig: {
     lang: Object.assign(require('vuepress-theme-hoperyy/lib/langs/zh-CN'), {
-      home: `远洋科技工作室`,
+      home: `远洋的网络空间`,
       posts: 'My Posts',
     }),
 
     personalInfo: {
-      nickname: 'meteorlxy',
-      description: 'Happy Coding<br/>Happy Life',
-      email: 'meteor.lxy@foxmail.com',
-      location: 'Xi\'an City, China',
-      organization: 'Xi\'an Jiao Tong University',
+      nickname: 'hoperyy',
+      description: 'FE / Node',
+      location: '中国 · 杭州',
 
       avatar: '/assets/img/avatar.jpg',
 
       sns: {
         github: {
-          account: 'meteorlxy',
-          link: 'https://github.com/meteorlxy',
-        },
-        facebook: {
-          account: 'meteorlxy.cn',
-          link: 'https://www.facebook.com/meteorlxy.cn',
-        },
-        linkedin: {
-          account: 'meteorlxy',
-          link: 'http://www.linkedin.com/in/meteorlxy',
-        },
-        twitter: {
-          account: 'meteorlxy_cn',
-          link: 'https://twitter.com/meteorlxy_cn',
+          account: 'hoperyy',
+          link: 'https://github.com/hoperyy',
         },
         weibo: {
           account: '@焦炭君_Meteor',
           link: 'https://weibo.com/u/2039655434',
-        },
-        zhihu: {
-          account: 'meteorlxy.cn',
-          link: 'https://www.zhihu.com/people/meteorlxy.cn',
-        },
-        douban: {
-          account: '159342708',
-          link: 'https://www.douban.com/people/159342708',
         },
       },
     },
@@ -76,8 +54,8 @@ module.exports = {
 
     comments: {
       platform: 'github',
-      owner: 'meteorlxy',
-      repo: 'meteorlxy.github.io',
+      owner: 'hoperyy',
+      repo: 'hoperyy.github.io',
       clientId: '960bbc7e80512b06153e',
       clientSecret: 'd63ad26efd7e29fc5a9533742d7fc5c88347b6ba',
       prefix: '[Comments] ',
