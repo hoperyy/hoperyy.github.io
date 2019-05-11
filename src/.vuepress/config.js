@@ -50,6 +50,7 @@ module.exports = {
       { text: 'Home', link: '/', exact: true },
       { text: 'Posts', link: '/posts/', exact: false  },
       { text: 'Projects', link: '/projects/', exact: false  }, 
+      { text: '知识体系', link: '/knowledges/', exact: false }, 
     ],
 
     comments: {
