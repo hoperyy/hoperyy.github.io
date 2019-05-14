@@ -16,9 +16,11 @@ module.exports = {
   theme: 'vuepress-theme-hoperyy',
 
   themeConfig: {
+    // 胚子每个路由的页面 title
     lang: Object.assign(require('vuepress-theme-hoperyy/lib/langs/zh-CN'), {
       home: `远洋的网络空间`,
-      posts: 'My Posts',
+      posts: '分类',
+      knowledges: '知识体系'
     }),
 
     personalInfo: {
@@ -46,9 +48,10 @@ module.exports = {
       useGeo: true,
     },
 
+    // 新增导航
     nav: [
       { text: 'Home', link: '/', exact: true },
-      { text: 'Posts', link: '/posts/', exact: false  },
+      { text: '分类', link: '/posts/', exact: false  },
       { text: 'Projects', link: '/projects/', exact: false  }, 
       { text: '知识体系', link: '/knowledges/', exact: false }, 
     ],
