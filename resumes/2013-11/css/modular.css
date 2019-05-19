@@ -1,0 +1,378 @@
+@charset "utf-8";
+/* CSS Document */
+
+.modular {
+	position: absolute;
+	left: 0;
+	top: 0;
+	/* background: url(/images/background/showWindowBg.png) 0 0 repeat; */
+	background: #ccc;
+	border-radius: 10px;
+	}
+.modular .prev, .modular .next {
+	position: absolute;
+	width: 76px;
+	height: 112px;
+	color: black;
+	font: 30px/100px Verdana, Geneva, sans-serif;
+	text-align: center;
+	top: 170px;
+	opacity: 0;
+	filter: alpha(opacity: 0);
+	display: none;
+	}
+
+.modular .prev {
+	left: 140px;
+	background: url(/images/modular/prev_1.png) 0 0 no-repeat;
+	}
+.modular .next {
+	right: 140px;
+	background: url(/images/modular/next_1.png) 0 0 no-repeat;
+	}
+.modular .modular_bg {
+	background: black;
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	filter: alpha(opacity: 0);
+	width: 900px;
+	}
+	
+.mdCont {
+	position: absolute;
+	left: 0;
+	top: 30px;
+	}
+.mdCont li.mdLi {
+	position: relative;
+	display: none;
+	}
+.mdCont li.mdLi_active {
+	display: block;
+	}
+	
+.mdCont li.mdLi .mdLi_item {
+	float: left;
+	width: 258px;
+	border: 1px solid black;
+	height: 200px;
+	margin: 20px;
+	background: white;
+	cursor: pointer;
+	background: url(/images/background/bg.png) 0 0 repeat;
+	}
+
+.mdCont li.mdLi .mdLi_item .img_cont {
+	width: 100%;
+	height: 100%;
+	}
+.mdCont li.mdLi .mdLi_item .img_cont img.showImg {
+	width: 100%;
+	height: 100%;
+	display: block;
+	}
+.mdCont li.mdLi .mdLi_item .cont {
+	width: 100%;
+	height: 100%;
+	display: none;
+	}
+
+.mdCont li.mdLi .mdLi_item .detail {
+	height: 50px;
+	width: 100%;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	color: white;
+	cursor: pointer;
+	border-top: 1px solid #ccc;
+	text-indent: 10px;
+	}
+.mdCont li.mdLi .mdLi_item .detail h3 {
+	height: 20px;
+	font: bold 14px/20px Verdana, Geneva, sans-serif;
+	}
+.mdCont li.mdLi .mdLi_item .detail p {
+	height: 20px;
+	font: 12px/20px Verdana, Geneva, sans-serif;
+	}
+	
+.modular .pages {
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	width: 200px;
+	margin-left: -100px;
+	}
+.modular .pages a {
+	float: left;
+	width: 28px;
+	border: 1px solid black;
+	height: 20px;
+	margin: 0 10px;
+	text-align: center;
+	font: 14px/20px Verdana, Geneva, sans-serif;
+	color: black;
+	}
+.modular .pages a.active {
+	background: url(/images/background/sidebar_bg.png) 0 0 repeat;
+	color: white;
+	}
+	
+.modular .modular_goBack {
+	position: absolute;
+	right: 210px;/*正常230px*/
+	top: 40px;
+	width: 42px;
+	height: 42px;
+	cursor: pointer;
+	background:url(/images/background/close2.png) 0 0 no-repeat;
+	z-index: 0;
+	opacity: 0;
+	filter: alpha(opacity: 0);
+	display: none;
+	}
+	
+.modular .modular_goBack  span {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 30px;
+	height: 30px;
+	margin-left: -15px;
+	margin-top: -15px;
+	background: url(/images/background/bg.png) 0 0 repeat;
+	border: 1px solid black;
+	border-radius: 50%;
+	z-index: 1;
+	}
+		
+.modular .modular_goBack i {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -9px;
+	margin-top: -9px;
+	width: 18px;
+	height: 18px;
+	background: url(/images/background/close3.png) 5px 4px no-repeat;
+	z-index: 2;
+	}
+
+/*手风琴*/
+.mdCont .accordion_0 {
+	width: 400px;
+	height: 350px;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -200px;
+	overflow: hidden;
+	/*width: 400px;
+	height: 300px;
+	position: absolute;
+	left: 50%;
+	bottom: 30px;
+	margin-left: -200px;*/
+	}
+.mdCont .accordion_0 li {
+	width: 22px;
+	height: 350px;
+	margin: 0;
+	float: left;
+	border-radius: 0;
+	position: relative;
+	}
+.mdCont .accordion_0 li img {
+	display: block;
+	width: 290px;
+	height: 350px;
+	}
+.mdCont .accordion_0 span {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 22px;
+	text-align: center;
+	height: 350px;
+	}
+	
+.mdCont .accordion_0 li.active {
+	width: 290px;
+	}
+.mdCont .accordion_0 .bg0 { background: #00FFCC; }
+.mdCont .accordion_0 .bg1 { background: #636363; }
+.mdCont .accordion_0 .bg2 { background: #3d7fbb; }
+.mdCont .accordion_0 .bg3 { background: #5ca716; }
+.mdCont .accordion_0 .bg4 { background: #f28b24; }
+.mdCont .accordion_0 .bg5 { background: #7c0070; }
+
+/*CSS3时钟*/
+.mdCont .clock_1 { width: 300px; height: 300px; border: 2px solid black; border-radius: 50%; position:absolute; background: white; left: 50%; margin-left: -150px; top: 50%; margin-top: -170px; }
+
+.mdCont .clock_1 .hour, .mdCont .clock_1 .min, .mdCont .clock_1 .sec { position: absolute; left: 50%; background: black; }
+.mdCont .clock_1 .hour { width: 6px; height: 60px; margin-left: -3px; top: 90px; }
+.mdCont .clock_1 .min { width: 4px; height: 80px; margin-left: -2px; top: 70px; }
+.mdCont .clock_1 .sec { width: 2px; height: 90px; margin-left: -1px; top: 60px; }
+
+.mdCont .clock_1 .cen { width: 20px; height: 20px; background: black; border-radius: 50%; position: absolute; left: 50%; margin-left: -10px; top: 50%; margin-top: -10px; }
+
+.mdCont .clock_1 .small { position:absolute; left: 50%; top: 0; width: 2px; margin-left: -1px; height: 8px; background: black; }
+.mdCont .clock_1 .big { position:absolute; left: 50%; top: 0; width: 4px; margin-left: -2px; height: 12px; background: black; }
+.mdCont .clock_1 .big em { font-style: normal; font-weight: bold; position: absolute; left: -98px; width: 200px; font-size: 20px; text-align: center; top: 12px; }
+
+/*chrome首页_2*/
+.mdCont .chrome_2 {
+	width: 400px;
+	height: 300px;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -200px;
+	}
+.mdCont .chrome_2 li {
+	float: left;
+	width: 80px;
+	height: 50px;
+	background:url(/images/background/showWindow.png) 0 0 repeat;
+	margin: 10px;
+	font: bold 16px/50px Verdana, Geneva, sans-serif;
+	text-align: center;
+	cursor: pointer;
+	}
+	
+/*鼠标跟随*/
+.mdCont .mousemove_3 {
+	width: 100%;
+	height: 350px;
+	}
+.mdCont .mousemove_3 li {
+	float: left;
+	width: 178px;
+	height: 198px;
+	margin: 75px 10px;
+	border: 1px solid black;
+	position: relative;
+	}
+.mdCont .mousemove_3 img {
+	display: block;
+	width: 178px;
+	height: 198px;
+	} 
+.mdCont .mousemove_3 p {
+	position: absolute;
+	width: 100px;
+	height: 50px;
+	border: 1px solid black;
+	background: white;
+	font: 20px/50px Verdana, Geneva, sans-serif;
+	text-align: center;
+	display: none;
+	z-index: 1;
+	}
+	
+/*日历*/
+.mdCont .calendar_4 input { border: 1px solid black; width: 100px; height: 20px; margin: 30px; }
+.mdCont .calendar_4 .calendar { position:absolute; left:10px; top:100px; border:1px solid black; width:280px; background:white; }
+.mdCont .calendar_4 .calendar .title { height:30px; line-height:30px; background:#ccc; text-align:center; font-size:14px; border-bottom:1px solid black; position:relative; }
+.mdCont .calendar_4 .calendar .weekday { border-bottom:1px solid black; }
+.mdCont .calendar_4 .calendar .weekday li { float:left; width:40px; height:30px; line-height:30px; text-align:center; color:black; }
+.mdCont .calendar_4 .calendar .dates li { float:left; width:40px; height:30px; line-height:30px; text-align:center; color:black; }
+.mdCont .calendar_4 .calendar .dates .gray { color:#ccc; }
+.mdCont .calendar_4 .calendar .dates .none { background:none; }
+.mdCont .calendar_4 .calendar .dates .today { background: url(/images/background/sidebar_bg.png) 0 0 repeat; color: white; }
+.mdCont .calendar_4 .calendar .dates .bg-gray{ background:#ccc; }
+.mdCont .calendar_4 .calendar .box .weekend { color:red; }
+.mdCont .calendar_4 .calendar .cal_pre { position:absolute; width:30px; height:30px; left:0; top:0; line-height:30px; text-align:center; text-decoration:none; color:black; }
+.mdCont .calendar_4 .calendar .cal_next { position:absolute; width:30px; height:30px; right:0; top:0; line-height:30px; text-align:center; text-decoration:none; color:black;  }
+.mdCont .calendar_4 .calendar .txt { width:280px; height:30px; position:absolute; left:200px; top:20px; }
+
+/*可拖拽大小的弹出层*/
+.mdCont .DRAG_RESIZE_5 { position:absolute; width:400px; height:350px; left:0; top:0; }
+
+.mdCont .DRAG_RESIZE_5 div { position:absolute; }
+
+.mdCont .DRAG_RESIZE_5 .CORNER { width:30px; height:30px; background: url(/images/background/sidebar_bg2.png) 0 0 repeat; }
+.mdCont .DRAG_RESIZE_5 .MBAR { width:100%; height:30px; background: url(/images/background/sidebar_bg.png) 0 0 repeat; }
+.mdCont .DRAG_RESIZE_5 .l { width:30px; height:100%; background:blue; cursor: pointer; background: url(/images/background/sidebar_bg.png) 0 0 repeat; }
+.mdCont .DRAG_RESIZE_5 .mm { width:100%; height:100%; background:gray; }
+.mdCont .DRAG_RESIZE_5 .r { width:30px; height:100%; background:blue; cursor: pointer; background: url(/images/background/sidebar_bg.png) 0 0 repeat; }
+
+.mdCont .DRAG_RESIZE_5 .tl { left:0; top:0; z-index:3;  cursor: pointer; }
+.mdCont .DRAG_RESIZE_5 .t { left:0; top:0; z-index:2; }
+.mdCont .DRAG_RESIZE_5 .tr { right:0; top:0; z-index:3; cursor: pointer; }
+.mdCont .DRAG_RESIZE_5 .l { left:0; top:0; z-index:2; }
+.mdCont .DRAG_RESIZE_5 .mm { left:0; top:0; z-index:1; }
+.mdCont .DRAG_RESIZE_5 .r { right:0; top:0; z-index:2; }
+.mdCont .DRAG_RESIZE_5 .bl { left:0; bottom:0; z-index:3; cursor: pointer; }
+.mdCont .DRAG_RESIZE_5 .b { left:0; bottom:0; z-index:2; }
+.mdCont .DRAG_RESIZE_5 .br { right:0; bottom:0; z-index:3; cursor: pointer; }
+
+/*自定义滚动条*/
+.mdCont .scrollBar_6 { width:400px; height:350px; border:1px solid black; position:absolute; left:50%; top:50%; margin-left:-200px; margin-top:-200px; }
+.mdCont .scrollBar_6 .scroll_barBox { width:30px; height:100%; background:#ccc; position:absolute; right:0; top:0; }
+.mdCont .scrollBar_6 .scroll_bar { width:30px; height:50px; background: url(/images/background/sidebar_bg.png) 0 0 repeat; position:absolute; left:0; top:20px; cursor:pointer; }
+.mdCont .scrollBar_6 .scroll_contBox { width:360px; padding-left: 10px; height:100%; position:absolute; left:0; top:0; overflow:hidden; }
+.mdCont .scrollBar_6 .scroll_cont { width:360px; padding-left: 10px; position:absolute; left:0; top:0; font: 16px/26px Verdana, Geneva, sans-serif; }
+.mdCont .scrollBar_6 .scroll_up, .mdCont .scrollBar_6 .scroll_down { height:20px; width:30px; position:absolute; background: url(/images/background/sidebar_bg2.png) 0 0 repeat; color: white; text-align:center; line-height:20px; cursor:pointer; }
+.mdCont .scrollBar_6 .scroll_up { left:0; top:0; }
+.mdCont .scrollBar_6 .scroll_down { left:0; bottom:0; }
+
+/*百度联想*/
+.mdCont .associate_7 {
+	width: 400px;
+	height: 350px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(/images/modular/associate_7/bdlogo.png) 65px 10px no-repeat;
+	}
+	
+.mdCont .associate_7 .search {
+	width: 200px;
+	height: 20px;
+	margin: 120px 99px;
+	border: 1px solid #999;
+	box-shadow: inset 0 0 6px #ccc;
+	background: white;
+	}
+.mdCont .associate_7 .resultUl {
+	display: none;
+	width: 200px;
+	position: absolute;
+	left: 50%;
+	top: 52px;
+	border: 1px solid black;
+	font: 14px/20px "宋体";
+	background: white;
+	}
+	
+/*苹果展示*/
+.mdCont .apple_8 {position:absolute; left: 0; bottom: 150px; width: 400px; text-align:center; }
+
+/*弹性导航*/
+.mdCont .flex_nav_9 {position: absolute; width:360px; left: 50%; top: 50%; margin-left: -180px; margin-top: -55px; height: 30px; }
+.mdCont .flex_nav_9 li {float:left; width:88px; height:28px; border:1px solid black; text-align:center; line-height:28px; position:relative; z-index:2;}
+.mdCont .flex_nav_9 li.flex_nav_box {position:absolute; background:yellow; position:absolute; left:0; top:0; z-index:1; background: url(/images/background/sidebar_bg2.png) 0 0 repeat; }
+
+/*弹性运动*/
+.mdCont .flex_move_10 { width: 400px; height: 350px; position: absolute; left: 0; top: 0;}
+.mdCont .flex_move_10 .flex_move_box {width:100px; height:100px; background: url(/images/background/sidebar_bg.png) 0 0 repeat; position:absolute; left:0; top:0;}
+
+/*无缝滚动*/
+.nogaprun_10 { width: 400px; height: 350px; overflow: hidden; position: relative; background: #ccc; }
+.nogaprun_10 ol { position: absolute; left: 200px; bottom: 5px; z-index: 2; }
+.nogaprun_10 ol li { float: left; margin-right: 3px; display: inline; cursor: pointer; background: #fcf2cf; border: 1px solid #f47500; padding: 2px 6px; color: #d94b01; font-family: arial; font-size: 12px; }
+.nogaprun_10 .active { padding: 3px 8px; font-weight: bold; color: #ffffff; background: #ffb442; position: relative; bottom: 2px; }
+
+.nogaprun_10 ul { position: absolute; top: 0; left: 0; z-index: 1; }
+.nogaprun_10 ul li { width: 400px; height: 350px; float: left; }
+.nogaprun_10 ul img { float: left; width: 400px; height: 350px; }
+
+.nogaprun_10 p { width: 20px; height: 20px; line-height: 20px; font-family: arial; color: #fff; text-align: center; font-weight: bold; background: #333; border: 1px solid #ccc; position: absolute; top: 50%; margin-top: -10px; z-index: 2; cursor: pointer; }
+.nogaprun_10 .nogaprun_prev { left: 10px; }
+.nogaprun_10 .nogaprun_next { right: 10px; }

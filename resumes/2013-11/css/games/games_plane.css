@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS Document */
+.games .gamesUl .plane {
+	background: url(/images/game_plan/background_2.png) 0 0 repeat;
+	}
+
+.games .play_plane {
+	overflow: hidden;
+	}
+.games .play_plane li {
+	position: absolute;
+	}
+.games .play_plane .bullet1 {
+	width: 6px;
+	height: 14px;
+	background: url(/images/game_plan/bullet1.png) 0 0 no-repeat;
+	}
+.games .play_plane .bullet2 {
+	width: 48px;
+	height: 14px;
+	background: url(/images/game_plan/bullet2.png) 0 0 no-repeat;
+	top: 16px;
+	}
+.games .play_plane .enemy1 {
+	width: 38px;/*34*/
+	height: 34px;/*24*/
+	background: url(/images/game_plan/enemy1_fly_1.png) 0 0 no-repeat;
+	top: 32px;
+	}
+.games .play_plane .enemy2 {
+	width: 110px;
+	height: 169px;
+	background: url(/images/game_plan/enemy2_fly_1.png) 0 0 no-repeat;
+	top: 60px;
+	}
+.games .play_plane .enemy3 {
+	width: 46px;
+	height: 60px;
+	background: url(/images/game_plan/enemy3_fly_1.png) 0 0 no-repeat;
+	left: 70px;
+	}
+.games .play_plane .hero {
+	width: 66px;
+	height: 82px;
+	background: url(/images/game_plan/hero_fly_1.png) 0 0 no-repeat;
+	/*left: 50%;*/
+	bottom: 0;
+	z-index: 0;
+	/*margin-left: -33px;*/
+	display: none;
+	}
+.games .play_plane .bomb_icon {
+	width: 42px;
+	height: 36px;
+	background: url(/images/game_plan/bomb.png) 0 0 no-repeat;
+	bottom: 10px;
+	left: 10px;
+	display: none;
+	z-index: 1;
+	}
+.games .play_plane .bomb_gift {
+	width: 39px;
+	height: 68px;
+	background:url(/images/game_plan/bomb_gift_fly_1.png) 0 0 no-repeat;
+	left: 230px;
+	z-index: 1;
+	}
+.games .play_plane .bullet_gift {
+	width: 38px;
+	height: 58px;
+	background:url(/images/game_plan/bullet_gift_fly_1.png) 0 0 no-repeat;
+	left: 285px;
+	z-index: 1;
+	}
+.games .play_plane .pause {
+	width: 28px;
+	height: 30px;
+	background: url(/images/game_plan/game_pause.png) 0 0  no-repeat;
+	left: 10px;
+	top: 10px;
+	display: none;
+	cursor: pointer;
+	z-index: 1;
+	}
+.games .play_plane .loading {
+	width: 65px;
+	height: 65px;
+	background: url(/images/game_plan/loading.gif) 0 0 no-repeat;
+	left: 50%;
+	top: 50%;
+	margin-left: -32px;
+	margin-top: -32px;
+	display: none;
+	}
+	
+.games .play_plane .score {
+	height: 30px;
+	font: bold 20px/30px Verdana, Geneva, sans-serif;
+	position: absolute;
+	left: 40px;
+	top: 10px;
+	color: #000;
+	text-indent: 10px;
+	text-align: left;
+	z-index: 1;
+	}
+.games .play_plane .bomb_number {
+	position: absolute;
+	left: 60px;
+	bottom: 10px;
+	height: 36px;
+	font: bold 20px/30px Verdana, Geneva, sans-serif;
+	text-indent: 0;
+	text-align: left;
+	z-index: 1;
+	}
