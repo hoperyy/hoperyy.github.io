@@ -1,0 +1,17 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "qute project",
+  "scripts": {
+    "dev-daily": "qute run dev-daily",
+    "dev-pre": "qute run dev-pre",
+    "dev-prod": "qute run dev-prod",
+    "build-daily": "qute run build-daily",
+    "build-pre": "qute run build-pre",
+    "build-prod": "qute run build-prod"
+  },
+  "devDependencies": {
+    "qute-cli": "^1.0.0"
+  },
+  "qute-scaffold": "qute-scaffold"
+}
