@@ -1,7 +1,7 @@
 {
-  "name": "demo",
+  "name": "hoperyy-website",
   "version": "1.0.0",
-  "description": "qute project",
+  "description": "hoperyy-website",
   "scripts": {
     "dev-daily": "qute run dev-daily",
     "dev-pre": "qute run dev-pre",
